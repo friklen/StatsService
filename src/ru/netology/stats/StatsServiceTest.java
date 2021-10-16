@@ -9,7 +9,7 @@ public class StatsServiceTest {
         int[] purchases;
         purchases = new int[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
-
+    }
         int expected = 180;
         int actual = service.sum(purchases);
         Assertions.assertEquals(expected, actual);

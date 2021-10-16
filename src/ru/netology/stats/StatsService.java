@@ -1,6 +1,8 @@
 package ru.netology.stats;
 
 public class StatsService {
+    private int[] purchases;
+
     int sum(int[] purchases) {
         int result = 0;
         for (int purchase : purchases) {
@@ -9,12 +11,13 @@ public class StatsService {
         return result;
     }
 }
-    int average(int[] purchases) {
+    public int average(int[] purchases) {
+        this.purchases = purchases;
         return sum(purchases) / purchases.length;
     }
 
-
-    int monthWithMax(int[] purchases) {
+    public int monthWithMax(int[] purchases) {
+        this.purchases = purchases;
         int max = purchases[0];
         for (int purchase : purchases) {
             if (purchase > max) {
